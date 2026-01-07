@@ -1,0 +1,306 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>What's For Dinner</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="mynav navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-xl py-2">
+        <div class="d-flex align-items-center justify-content-center">
+          <div class="page-logo rounded-circle">
+            <img src="images/icons/food.png" class="w-100" alt="page logo" />
+          </div>
+          <div class="page-name">
+            <p class="main-name p-0 m-0">What's For Dinner</p>
+            <p class="second-name p-0 m-0">Your daily meal inspiration</p>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="nav-links navbar-nav ms-auto mb-2 mb-lg-0 d-flex gap-lg-4 align-items-lg-center justify-content-start"
+          >
+            <li class="nav-item save-icon">
+              <a class="nav-link p-0" aria-current="page" href="#"
+                ><img src="images/icons/bookmark-grey.png" alt=""
+              /><span class="nav-item-text">Saved Recipes</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-0" aria-current="page" href="#"
+                ><img src="images/icons/history.png" alt=""
+              /><span class="nav-item-text">Recent</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-0" aria-current="page" href="#"
+                ><img src="images/icons/settings.png" alt=""
+              /><span class="nav-item-text">Settings</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-0" aria-current="page" href="#"
+                ><div class="profile-photo"><img src="images/profile-photo.jpg" class="w-100" alt=""
+              /></div> <span class="nav-item-text">Profile</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="main mt-5 ">
+      <div class="container ">
+        <div class="row main-recipe-row  mb-5">
+          <div class="img-side col-lg-5 p-0 position-relative ">
+            <img id="recipe-image" src="" class="recipe-image-container w-100 h-100 object-fit-lg-cover" alt="">
+            <div class="recipe-stats d-flex justify-content-around text-center align-items-center">
+              <div>
+                <img src="images/icons/clock.png" width="25px" class="mb-1" alt="">
+                <p class="m-0 p-0">Prep Time</p>
+                <span><span id="prep_time">..</span> min</span>
+              </div>
+              <div >
+                <img src="images/icons/cooking.png" width="25px" class="mb-1" alt="">
+                <p class="m-0 p-0">Cook Time</p>
+                <span><span id="cook_time">..</span> min</span>
+              </div>
+              <div >
+                <img src="images/icons/users.png" width="25px" class="mb-1" alt="">
+                <p class="m-0 p-0">Servings</p>
+                <span> <span id="serving-count">..</span> people</span>
+            </div>
+            
+            </div>
+             <div
+                class="d-flex position-absolute bg-white rounded-5 px-3 py-2 recipe-rate"
+              >
+                <div class="m-0 me-2 star-rate">
+                  <img
+                    src="images/icons/star.png"
+                    class="w-100"
+                    alt="Rating Stars"
+                  />
+                </div>
+                <div class="me-2">
+                  <span id="recipe-rating-number" class="recipe-rating-number"
+                    >..</span
+                  >
+                </div>
+                <div>
+                  <p class="d-inline m-0">
+                    (<span id="recipe-rating-count">...</span> reviews)
+                  </p>
+                </div>
+              </div>
+          </div>
+          <div class="content-side col-lg-7 p-4  ">
+            <div class="badges d-flex gap-3 ">
+              <p id="recipe-level" class="badge rounded-pill ">..</p>
+              <p id="recipe-culture" class="badge rounded-pill ">..</p>
+            </div>
+            <div class="my-3 d-flex justify-content-between align-items-start">
+              <div class="recipe-title ">
+                <p id="recipe-name">...</p>
+                <p id="recipe-description">........</p>
+            </div>
+            <div class="save-share-bottons">
+              <ul class="d-flex gap-3 list-unstyled">
+                <li>
+                  <a href=""><img src="images/icons/bookmark-orange.png" class="p-0 m-0" width="12px" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><img src="images/icons/share.png" class="p-0 m-0" width="15px" alt=""></a>
+                </li>
+              </ul>
+            </div>
+            </div>
+            <div id="alert" class="alert d-flex align-items-center rounded-3">
+              <div class="me-3" style="width: 1.875rem;">
+                <img src="images/icons/warning.png"  class="w-100" alt="">
+              </div>
+              <div>
+                <h5 class="p-0 m-0" style="color: #9F0712;">Extended Preparation Time</h5>
+                <p class="p-0 m-0 text-danger" style="color: #E7000B;">This recipe requires more than 45 minutes to prepare. Plan accordingly!</p>
+              </div>
+            </div>
+
+            <ul class="nav nav-tabs flex-wrap justify-content-around p-3" id="recipeTab" role="tablist">
+      
+              <li class="navtap-item" role="presentation">
+                  <button class="nav-link active d-flex align-items-center gap-2 " 
+                          id="ingredients-tab" 
+                          data-bs-toggle="tab" 
+                          data-bs-target="#ingredients-pane" 
+                          type="button" 
+                          role="tab" 
+                          aria-controls="ingredients-pane" 
+                          aria-selected="true">
+                      <div class="navtap-icons" style="width: 1.25rem;">
+                          <img src="images/icons/checklist gray.svg" class="w-100" alt="Ingredients">
+                      </div>
+                      <p class="m-0">Ingredients</p>
+                  </button>
+              </li>
+
+              <li class="navtap-item" role="presentation">
+                  <button class="nav-link d-flex align-items-center gap-2" 
+                          id="instructions-tab" 
+                          data-bs-toggle="tab" 
+                          data-bs-target="#instructions-pane" 
+                          type="button" 
+                          role="tab" 
+                          aria-controls="instructions-pane" 
+                          aria-selected="false">
+                      <div class="navtap-icons" style="width: 1.25rem;">
+                          <img src="images/icons/book.png" class="w-100" alt="Instructions">
+                      </div>
+                      <p class="m-0">Instructions</p>
+                  </button>
+              </li>
+
+              <li class="navtap-item" role="presentation">
+                  <button class="nav-link d-flex align-items-center gap-2" 
+                          id="nutrition-tab" 
+                          data-bs-toggle="tab" 
+                          data-bs-target="#nutrition-pane" 
+                          type="button" 
+                          role="tab" 
+                          aria-controls="nutrition-pane" 
+                          aria-selected="false">
+                      <div class="navtap-icons" style="width: 1.25rem;">
+                          <img src="images/icons/analytics.png" class="w-100" alt="Nutrition">
+                      </div>
+                      <p class="m-0">Nutrition</p>
+                  </button>
+              </li>
+
+              <li class="navtap-item" role="presentation">
+                  <button class="nav-link d-flex align-items-center gap-2" 
+                          id="tips-tab" 
+                          data-bs-toggle="tab" 
+                          data-bs-target="#tips-pane" 
+                          type="button" 
+                          role="tab" 
+                          aria-controls="tips-pane" 
+                          aria-selected="false">
+                      <div class="navtap-icons" style="width: 1.25rem;">
+                          <img src="images/icons/lightBlub.png" class="w-100" alt="Tips">
+                      </div>
+                      <p class="m-0">Chef's Tips</p>
+                  </button>
+              </li>
+            </ul>
+
+            <div class="navtap-body tab-content mt-4 mb-5" id="recipeTabContent">   
+              <div class="tab-pane fade show active" 
+                  id="ingredients-pane" 
+                  role="tabpanel" 
+                  aria-labelledby="ingredients-tab" 
+                  tabindex="0">
+                  <div id="ingredients" class="navtap-content navtap-bg-color p-3"></div>
+              </div>
+              <div class="tab-pane fade" 
+                  id="instructions-pane" 
+                  role="tabpanel" 
+                  aria-labelledby="instructions-tab" 
+                  tabindex="0">
+                  <div id="instructions" class="navtap-content p-3"></div>
+              </div>
+              <div class="tab-pane fade" 
+                  id="nutrition-pane" 
+                  role="tabpanel" 
+                  aria-labelledby="nutrition-tab" 
+                  tabindex="0">
+                  <div class="navtap-content p-3">
+                      <div class="row row-cols-1 row-cols-lg-2 justify-content-around ">
+                        <div class="nutrition-card col d-flex justify-content-between align-items-center mb-5">
+                          <div class="nutrition-item d-flex justify-content-between align-items-center">
+                            <div class="nutrition-item-icons"><img src="images/icons/fire.png" class="w-100" alt=""></div>
+                            <span>Calories</span>
+                          </div>
+                          <div class="nutrition-value">
+                            <p><span id="calories-value">..</span> Kcal</p>
+                          </div>
+                        </div>
+                        <div class="nutrition-card col d-flex justify-content-between align-items-center mb-5">
+                          <div class="nutrition-item d-flex justify-content-between align-items-center">
+                            <div class="nutrition-item-icons"><img src="images/icons/fitness.png" class="w-100" alt=""></div>
+                            <span>Protein</span>
+                          </div>
+                          <div class="nutrition-value">
+                            <p><span id="protein-value">..</span>g</p>
+                          </div>
+                        </div>
+                        <div class="nutrition-card col d-flex justify-content-between align-items-center mb-5">
+                          <div class="nutrition-item d-flex justify-content-between align-items-center">
+                            <div class="nutrition-item-icons"><img src="images/icons/crop.png" class="w-100" alt=""></div>
+                            <span>Carbohydrates</span>
+                          </div>
+                          <div class="nutrition-value">
+                            <p><span id="carbohydrates-value">..</span>g</p>
+                          </div>
+                        </div>
+                        <div class="nutrition-card col d-flex justify-content-between align-items-center mb-5">
+                          <div class="nutrition-item d-flex justify-content-between align-items-center">
+                            <div class="nutrition-item-icons"><img src="images/icons/drop.png" class="w-100" alt=""></div>
+                            <span>Fat</span>
+                          </div>
+                          <div class="nutrition-value">
+                            <p><span id="fat-value">..</span>g</p>
+                          </div>
+                        </div>
+                        <div class="nutrition-card col d-flex justify-content-between align-items-center mb-5">
+                          <div class="nutrition-item d-flex justify-content-between align-items-center">
+                            <div class="nutrition-item-icons"><img src="images/icons/plant.png" class="w-100" alt=""></div>
+                            <span>Fiber</span>
+                          </div>
+                          <div class="nutrition-value">
+                            <p><span id="fiber-value">..</span>g</p>
+                          </div>
+                        </div>
+                        <div class="nutrition-card col d-flex justify-content-between align-items-center mb-5">
+                          <div class="nutrition-item d-flex justify-content-between align-items-center">
+                            <div class="nutrition-item-icons"><img src="images/icons/box.png" class="w-100" alt=""></div>
+                            <span>Sodium</span>
+                          </div>
+                          <div class="nutrition-value">
+                            <p><span id="sodium-value">..</span>mg</p>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+              </div>
+              <div class="tab-pane fade" 
+                  id="tips-pane" 
+                  role="tabpanel" 
+                  aria-labelledby="tips-tab" 
+                  tabindex="0">
+                  <div id="chef-tips" class="navtap-content p-3"></div>
+              </div>
+            </div>
+
+            <div class="recipe-button">
+              <button onclick="changeRecipe()" id="recipe-change-button" class="btn btn-danger  d-flex align-items-center justify-content-center">
+                <img src="images/icons/refresh.png" width="20px" alt="">
+                Try Another Recipe</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
