@@ -19,17 +19,3 @@
 * **Bootstrap 5:** For grid system, responsiveness, navbar, and tabs components.
 * **JavaScript (ES6):** DOM manipulation, event handling, and logic.
 
-## 📂 Project Structure
-
-```text
-├── css/
-│   ├── bootstrap.min.css  # Bootstrap framework
-│   └── style.css          # Custom styling
-├── images/
-│   ├── icons/             # UI Icons
-│   └── [Recipe Images]    # Food photography
-├── js/
-│   ├── bootstrap.bundle.min.js
-│   └── index.js           # Main application logic
-├── index.html             # Main structure
-└── README.md              # Project documentation
